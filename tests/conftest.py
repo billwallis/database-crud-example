@@ -1,5 +1,6 @@
 import datetime
 import decimal
+import os
 from collections.abc import Generator
 
 import psycopg
@@ -18,8 +19,8 @@ def db_conn() -> Generator[psycopg.Connection, None, None]:
     """
     # TODO: find a better approach for transaction isolation
     db_config = src.DBConfig(
-        host="localhost",
-        port=5433,
+        host=os.getenv("POSTGRES_HOST", "localhost"),
+        port=int(os.getenv("POSTGRES_PORT", "5433")),
         database="test_db",
         user="test_db",
         password="test_db",  # noqa: S106

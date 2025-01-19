@@ -22,6 +22,7 @@ jobs:
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
+        ports: ["5432:5432"]
     steps:
       - name: 🛎️ Check out repository
         uses: actions/checkout@v4
@@ -40,3 +41,6 @@ jobs:
 
       - name: ✅ Run unit tests
         run: poetry run pytest -vvv
+        env:
+          POSTGRES_HOST: localhost
+          POSTGRES_PORT: 5432
