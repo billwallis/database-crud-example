@@ -87,10 +87,17 @@ class CustomerStore:
         )
 
     def delete(self, customer_id: int) -> None:
+        # TODO: data obfuscation is a business requirement, not a technical one,
+        #       so it should be moved to the service layer
         self.db_cursor.execute(
             """
             update domain.customers
-            set deleted = true
+            set deleted = true,
+                /* Obfuscate the sensitive data */
+                forename = gen_random_uuid(),
+                surname = gen_random_uuid(),
+                date_of_birth = '1990-01-01',
+                postcode = gen_random_uuid()
             where customer_id = %(customer_id)s
             """,
             {"customer_id": customer_id},
