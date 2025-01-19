@@ -1,5 +1,5 @@
 [project]
-name = "python-template"
+name = "database-crud-example"
 version = "0.0.0"
 description = ""
 authors = [{name = "Bilbottom"}]
@@ -14,6 +14,9 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+psycopg = {extras = ["binary"], version = "^3.2.4"}
 
 [tool.poetry.group]
 dev.optional = false

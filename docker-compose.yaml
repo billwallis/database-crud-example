@@ -1,0 +1,40 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json
+---
+services:
+  database:
+    image: postgres:17.2
+    container_name: database
+    restart: always
+    ports: ["5432:5432"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d bank_of_bill"]
+      interval: 10s
+      retries: 5
+      start_period: 30s
+      timeout: 10s
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: loan_system
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - app-db-data:/var/lib/postgresql/data/pgdata
+
+  test-database:
+    image: postgres:17.2
+    container_name: test-database
+    restart: always
+    ports: ["5433:5432"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d test_db"]
+      interval: 10s
+      retries: 5
+      start_period: 30s
+      timeout: 10s
+    environment:
+      POSTGRES_PASSWORD: test_db
+      POSTGRES_USER: test_db
+      POSTGRES_DB: test_db
+
+volumes:
+  app-db-data:
