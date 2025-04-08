@@ -1,34 +1,20 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "database-crud-example"
 version = "0.0.0"
-description = ""
+description = "A simple example of a CRUD implementation for a database layer."
 authors = [{name = "Bilbottom"}]
 readme = "README.md"
 requires-python = ">=3.11"
 dynamic = ["dependencies"]
 
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
 
-
-[tool.poetry]
-packages = [{include = "src"}]
-
-[tool.poetry.dependencies]
-psycopg = {extras = ["binary"], version = "^3.2.4"}
-
-[tool.poetry.group]
-dev.optional = false
-test.optional = false
-
-[tool.poetry.group.dev.dependencies]
-coverage-badge = "^1.1.0"
-pre-commit = "^3.6.2"
-
-[tool.poetry.group.test.dependencies]
-pytest = "^8.0.2"
-pytest-cov = "^4.1.0"
+[tool.setuptools]
+packages = ["src"]
+dynamic.dependencies = {file = ["requirements.txt"]}
 
 
 [tool.pytest.ini_options]
