@@ -90,11 +90,11 @@ def customer_2() -> src.CustomerResource:
 def loan_1__create_data() -> src.LoanCreationData:
     return src.LoanCreationData(
         account_id=1,
-        amount=decimal.Decimal(1_000),
-        interest_rate=decimal.Decimal(0.15),
+        amount=decimal.Decimal("1_000"),
+        interest_rate=decimal.Decimal("0.15"),
         start_date=datetime.date(2020, 1, 1),
         end_date=datetime.date(2021, 1, 1),
-        current_balance=decimal.Decimal(1_000),
+        current_balance=decimal.Decimal("1_000"),
     )
 
 
@@ -103,11 +103,11 @@ def loan_1() -> src.LoanResource:
     return src.LoanResource(
         loan_id=1,
         account_id=1,
-        amount=decimal.Decimal(1_000),
-        interest_rate=decimal.Decimal(0.15),
+        amount=decimal.Decimal("1_000"),
+        interest_rate=decimal.Decimal("0.15"),
         start_date=datetime.date(2020, 1, 1),
         end_date=datetime.date(2021, 1, 1),
-        current_balance=decimal.Decimal(1_000),
+        current_balance=decimal.Decimal("1_000"),
     )
 
 
@@ -115,11 +115,11 @@ def loan_1() -> src.LoanResource:
 def loan_2__create_data() -> src.LoanCreationData:
     return src.LoanCreationData(
         account_id=1,
-        amount=decimal.Decimal(10_000),
-        interest_rate=decimal.Decimal(0.10),
+        amount=decimal.Decimal("10_000"),
+        interest_rate=decimal.Decimal("0.10"),
         start_date=datetime.date(2020, 2, 1),
         end_date=datetime.date(2021, 2, 1),
-        current_balance=decimal.Decimal(10_000),
+        current_balance=decimal.Decimal("10_000"),
     )
 
 
@@ -128,11 +128,11 @@ def loan_2() -> src.LoanResource:
     return src.LoanResource(
         loan_id=2,
         account_id=1,
-        amount=decimal.Decimal(10_000),
-        interest_rate=decimal.Decimal(0.10),
+        amount=decimal.Decimal("10_000"),
+        interest_rate=decimal.Decimal("0.10"),
         start_date=datetime.date(2020, 2, 1),
         end_date=datetime.date(2021, 2, 1),
-        current_balance=decimal.Decimal(10_000),
+        current_balance=decimal.Decimal("10_000"),
     )
 
 
@@ -140,11 +140,11 @@ def loan_2() -> src.LoanResource:
 def loan_3__create_data() -> src.LoanCreationData:
     return src.LoanCreationData(
         account_id=2,
-        amount=decimal.Decimal(15_000),
-        interest_rate=decimal.Decimal(0.05),
+        amount=decimal.Decimal("15_000"),
+        interest_rate=decimal.Decimal("0.05"),
         start_date=datetime.date(2020, 3, 1),
         end_date=datetime.date(2021, 3, 1),
-        current_balance=decimal.Decimal(15_000),
+        current_balance=decimal.Decimal("15_000"),
     )
 
 
@@ -153,11 +153,11 @@ def loan_3() -> src.LoanResource:
     return src.LoanResource(
         loan_id=3,
         account_id=2,
-        amount=decimal.Decimal(15_000),
-        interest_rate=decimal.Decimal(0.05),
+        amount=decimal.Decimal("15_000"),
+        interest_rate=decimal.Decimal("0.05"),
         start_date=datetime.date(2020, 3, 1),
         end_date=datetime.date(2021, 3, 1),
-        current_balance=decimal.Decimal(15_000),
+        current_balance=decimal.Decimal("15_000"),
     )
 
 
