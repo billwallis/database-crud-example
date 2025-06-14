@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "database-crud-example"
 version = "0.0.0"
 description = "A simple example of a CRUD implementation for a database layer."
-authors = [{name = "Bilbottom"}]
+authors = [{name = "billwallis"}]
 readme = "README.md"
 requires-python = ">=3.11"
 dynamic = ["dependencies"]
