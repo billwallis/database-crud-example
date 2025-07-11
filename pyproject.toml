@@ -35,7 +35,9 @@ line-ending = "auto"
 
 [tool.ruff.lint]
 select = ["F", "I", "N", "PL", "R", "RUF", "S", "UP", "W"]
-ignore = []
+ignore = [
+    "PLW1641", #  Object does not implement `__hash__` method
+]
 fixable = ["ALL"]
 unfixable = []
 # Allow unused variables when underscore-prefixed
