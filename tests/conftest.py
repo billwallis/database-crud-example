@@ -25,7 +25,7 @@ def db_conn() -> Generator[psycopg.Connection, None, None]:
         user="test_db",
         password="test_db",  # noqa: S106
     )
-    conn = psycopg.connect(db_config.dsn)
+    conn = psycopg.connect(db_config.dsn, connect_timeout=3)
     try:
         src.migrate_up(conn)
         yield conn
