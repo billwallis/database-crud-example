@@ -1,4 +1,4 @@
-<div align="center">
+<span align="center">
 
 [![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![tests](https://github.com/billwallis/database-crud-example/actions/workflows/tests.yaml/badge.svg)](https://github.com/billwallis/database-crud-example/actions/workflows/tests.yaml)
@@ -9,7 +9,7 @@
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/billwallis/database-crud-example/main.svg)](https://results.pre-commit.ci/latest/github/billwallis/database-crud-example/main)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-17.2-teal.svg)](https://www.postgresql.org/download/)
 
-</div>
+</span>
 
 ---
 
