@@ -44,7 +44,7 @@ repos:
         name: Validate pre-commit CI config
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.14.10
+    rev: v0.15.9
     hooks:
       - id: ruff-check
         name: Lint Python code
@@ -53,7 +53,7 @@ repos:
         name: Format Python code
 
   - repo: https://github.com/billwallis/bills-hooks
-    rev: v0.0.6
+    rev: v0.0.13
     hooks:
       - id: tidy-gitkeep
         name: Remove redundant .gitkeep files
