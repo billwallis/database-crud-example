@@ -28,7 +28,7 @@ class LoanResource:
     end_date: datetime.date
     current_balance: decimal.Decimal
 
-    def __eq__(self, other: LoanResource):
+    def __eq__(self, other: LoanResource) -> bool:
         return (
             self.loan_id == other.loan_id
             and self.account_id == other.account_id
@@ -55,7 +55,7 @@ class LoanResource:
 
 
 class LoanStore:
-    def __init__(self, db_cursor: DatabaseCursor):
+    def __init__(self, db_cursor: DatabaseCursor) -> None:
         self.db_cursor = db_cursor
 
     def create(self, data: LoanCreationData) -> LoanResource:

@@ -14,20 +14,20 @@ from src import (
 def test__loans_can_be_created(loan_store: LoanStore):
     loan_creation_data = LoanCreationData(
         account_id=2,
-        amount=decimal.Decimal("20_000"),
+        amount=decimal.Decimal(20_000),
         interest_rate=decimal.Decimal("0.025"),
         start_date=datetime.date(2020, 4, 1),
         end_date=datetime.date(2021, 4, 1),
-        current_balance=decimal.Decimal("20_000"),
+        current_balance=decimal.Decimal(20_000),
     )
     loan_resource = LoanResource(
         loan_id=4,
         account_id=2,
-        amount=decimal.Decimal("20_000"),
+        amount=decimal.Decimal(20_000),
         interest_rate=decimal.Decimal("0.025"),
         start_date=datetime.date(2020, 4, 1),
         end_date=datetime.date(2021, 4, 1),
-        current_balance=decimal.Decimal("20_000"),
+        current_balance=decimal.Decimal(20_000),
     )
 
     loan = loan_store.create(loan_creation_data)
