@@ -1,11 +1,10 @@
 <span align="center">
 
-[![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org/downloads/)
+[![Python](https://img.shields.io/badge/Python-3.13+-blue.svg)](https://www.python.org/downloads/)
 [![tests](https://github.com/billwallis/database-crud-example/actions/workflows/tests.yaml/badge.svg)](https://github.com/billwallis/database-crud-example/actions/workflows/tests.yaml)
 [![coverage](coverage.svg)](https://github.com/dbrgn/coverage-badge)
 [![GitHub last commit](https://img.shields.io/github/last-commit/billwallis/database-crud-example)](https://shields.io/badges/git-hub-last-commit)
 
-[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/billwallis/database-crud-example/main.svg)](https://results.pre-commit.ci/latest/github/billwallis/database-crud-example/main)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-17.2-teal.svg)](https://www.postgresql.org/download/)
 

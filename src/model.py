@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Protocol
+from typing import Any, Protocol
 
 
 class DatabaseConnection(Protocol):
@@ -13,16 +13,16 @@ class DatabaseConnection(Protocol):
     def cursor(self) -> DatabaseCursor:
         pass  # pragma: no cover
 
-    def execute(self, *args, **kwargs) -> None:
+    def execute(self, *args: Any, **kwargs: Any) -> None:
         pass  # pragma: no cover
 
 
 class DatabaseCursor(Protocol):
-    def execute(self, *args, **kwargs) -> None:
+    def execute(self, *args: Any, **kwargs: Any) -> None:
         pass  # pragma: no cover
 
-    def fetchone(self, *args, **kwargs) -> tuple:
+    def fetchone(self, *args: Any, **kwargs: Any) -> tuple:
         pass  # pragma: no cover
 
-    def fetchall(self, *args, **kwargs) -> tuple:
+    def fetchall(self, *args: Any, **kwargs: Any) -> tuple:
         pass  # pragma: no cover

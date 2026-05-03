@@ -25,7 +25,7 @@ class AccountCustomerBridgeResource:
 
 
 class AccountCustomerBridgeStore:
-    def __init__(self, db_cursor: DatabaseCursor):
+    def __init__(self, db_cursor: DatabaseCursor) -> None:
         self.db_cursor = db_cursor
 
     def create(
