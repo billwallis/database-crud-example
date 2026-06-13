@@ -2,10 +2,10 @@
 
 [![Python](https://img.shields.io/badge/Python-3.13+-blue.svg)](https://www.python.org/downloads/)
 [![tests](https://github.com/billwallis/database-crud-example/actions/workflows/tests.yaml/badge.svg)](https://github.com/billwallis/database-crud-example/actions/workflows/tests.yaml)
-[![coverage](coverage.svg)](https://github.com/dbrgn/coverage-badge)
-[![GitHub last commit](https://img.shields.io/github/last-commit/billwallis/database-crud-example)](https://shields.io/badges/git-hub-last-commit)
+[![coverage](https://raw.githubusercontent.com/billwallis/database-crud-example/refs/heads/main/coverage.svg)](https://smarie.github.io/python-genbadge/)
 
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/billwallis/database-crud-example/main.svg)](https://results.pre-commit.ci/latest/github/billwallis/database-crud-example/main)
+[![GitHub last commit](https://img.shields.io/github/last-commit/billwallis/database-crud-example)](https://shields.io/badges/git-hub-last-commit)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-17.2-teal.svg)](https://www.postgresql.org/download/)
 
 </span>
