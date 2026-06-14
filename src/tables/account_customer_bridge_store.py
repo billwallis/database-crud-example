@@ -89,6 +89,7 @@ class AccountCustomerBridgeStore:
             )
 
         if account_id:
+            assert customer_id is None  # noqa: S101
             self.db_cursor.execute(
                 """
                 select account_id, customer_id
@@ -98,7 +99,8 @@ class AccountCustomerBridgeStore:
                 """,
                 {"account_id": account_id},
             )
-        elif customer_id:
+        if customer_id:
+            assert account_id is None  # noqa: S101
             self.db_cursor.execute(
                 """
                 select account_id, customer_id
