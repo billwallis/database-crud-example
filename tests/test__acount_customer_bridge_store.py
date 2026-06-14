@@ -22,14 +22,14 @@ def test__account_customer_bridges_can_be_created(
     "identifier, expected",
     [
         (
-            {"account_id": 1},
+            {"account_id": 1, "customer_id": None},
             [
                 AccountCustomerBridgeResource(account_id=1, customer_id=1),
                 AccountCustomerBridgeResource(account_id=1, customer_id=2),
             ],
         ),
         (
-            {"customer_id": 2},
+            {"account_id": None, "customer_id": 2},
             [
                 AccountCustomerBridgeResource(account_id=1, customer_id=2),
                 AccountCustomerBridgeResource(account_id=2, customer_id=2),
